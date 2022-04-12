@@ -16,7 +16,7 @@ createApp({
         }
     },
     methods:{
-       
+        
     },
     computed:{
         showCalcPeriodOnePaydate(){
@@ -71,8 +71,9 @@ createApp({
                 return (this.showCalcPeriodTwoRepaydate   && this.showCalcPeriodOneRepaydate ) ? result= Math.round(( this.showCalcPeriodOneRepaydate - this.showCalcPeriodTwoRepaydate  )/ this.showCalcPeriodTwoRepaydate * 10000 )/100 + ' %' : result = ' '; 
             }
             
-        },
+        },   
     },
+
     async mounted(){
         let data = await fetch('./assets/json/fetch.json');
             data = await data.json();
