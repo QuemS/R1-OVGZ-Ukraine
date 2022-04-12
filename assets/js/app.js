@@ -52,24 +52,17 @@ createApp({
             
         },
         showCaclPercentPaydate(){
-            let result ;
-            if (this.showCalcPeriodTwoPaydate   > this.showCalcPeriodOnePaydate ) {
-                return (this.showCalcPeriodTwoPaydate   && this.showCalcPeriodOnePaydate ) ? result= Math.round(( this.showCalcPeriodTwoPaydate - this.showCalcPeriodOnePaydate  )/ this.showCalcPeriodOnePaydate * 10000 )/100 + ' %' : result = ' '; 
-            }
-            if (this.showCalcPeriodTwoPaydate   < this.showCalcPeriodOnePaydate ) {
-                return (this.showCalcPeriodTwoPaydate   && this.showCalcPeriodOnePaydate ) ? result= Math.round(( this.showCalcPeriodOnePaydate - this.showCalcPeriodTwoPaydate  )/ this.showCalcPeriodTwoPaydate * 10000 )/100 + ' %' : result = ' '; 
-            }
+            return (this.showCalcPeriodTwoPaydate   && this.showCalcPeriodOnePaydate ) ? Math.round(( this.showCalcPeriodTwoPaydate - this.showCalcPeriodOnePaydate  )/ this.showCalcPeriodOnePaydate * 10000 )/100 + ' %' :  ' '; 
+            
+            
            
            
         },
         showCaclPercentRepaydate(){
-            let result ;
-            if (this.showCalcPeriodTwoRepaydate  > this.showCalcPeriodOneRepaydate ) {
-                return (this.showCalcPeriodTwoRepaydate   && this.showCalcPeriodOneRepaydate ) ? result= Math.round(( this.showCalcPeriodTwoRepaydate - this.showCalcPeriodOneRepaydate  )/ this.showCalcPeriodOneRepaydate * 10000 )/100 + ' %' : result = ' ';
-            }
-            if (this.showCalcPeriodTwoRepaydate   < this.showCalcPeriodOneRepaydate ) {
-                return (this.showCalcPeriodTwoRepaydate   && this.showCalcPeriodOneRepaydate ) ? result= Math.round(( this.showCalcPeriodOneRepaydate - this.showCalcPeriodTwoRepaydate  )/ this.showCalcPeriodTwoRepaydate * 10000 )/100 + ' %' : result = ' '; 
-            }
+            
+            return (this.showCalcPeriodTwoRepaydate   && this.showCalcPeriodOneRepaydate ) ? Math.round(( this.showCalcPeriodTwoRepaydate - this.showCalcPeriodOneRepaydate  )/ this.showCalcPeriodOneRepaydate * 10000 )/100 + ' %' : ' ';
+            
+            
             
         },   
     },
